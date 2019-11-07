@@ -1,0 +1,57 @@
+<section id="section1" class="panel">
+    <div class="bio-info">
+        <h1 class="p-name">Some generic info here...</h1>
+    </div>
+
+</section>
+{{!-- <section id="section2" class="panel">panel 2</section> --}}
+<section id="section3" class="panel">
+    <h1 class="user-panel-heading">
+        Welcome to our awesome team section!
+    </h1>
+
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati odit animi, vero perspiciatis
+        accusantium nisi molestiae, nostrum quisquam unde deleniti, expedita dicta ab quae possimus omnis amet!
+        Modi, nemo autem!Ducimus dolorum aliquid id quae vel sapiente, omnis iste fugiat magni rem
+        exercitationem. Facilis voluptatum praesentium animi rem provident, nam rerum reiciendis perspiciatis
+        optio dolorem magnam temporibus neque quo cum.
+    </p>
+
+    <h4>Click on a team member below to learn more about them.</h4>
+
+    <div class="team">
+        <!-- loop through all our team members and put their info on the page -->
+        <!-- this is like a forEach loop with plain JS -->
+
+        {{#each people}}
+        <div class="user-panel">
+            <img class="u-avatar" src="images/{{ avatar }}" alt="avatar">
+
+            <a class="u-link" href="{{ ID }}">
+                See More Info
+            </a>
+
+            <h1>{{ Name }}</h1>
+            <h3>{{ JobTitle }}</h3>
+        </div>
+        {{/each}}
+
+
+    </div>
+    </div>
+
+    <!-- this will be filled in on the client side when we render our AJAX data -->
+    <section class="lightbox">
+        <span class="close">x</span>
+        <div class="sidebar">
+            <img src="" alt="larger bio image">
+        </div>
+
+        <div class="lb-content">
+            
+        </div>
+    </section>
+</section>
+<section id="section4" class="panel">panel 4</section>
+<section id="section5" class="panel"></section>
