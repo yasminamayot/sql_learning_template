@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Nov 08, 2019 at 12:33 AM
+-- Generation Time: Nov 08, 2019 at 06:56 AM
 -- Server version: 5.7.26
--- PHP Version: 7.3.8
+-- PHP Version: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `favourites`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fave_intro`
+--
+
+CREATE TABLE `fave_intro` (
+  `ID` int(11) NOT NULL,
+  `Intro` varchar(300) NOT NULL,
+  `Splash` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `fave_intro`
+--
+
+INSERT INTO `fave_intro` (`ID`, `Intro`, `Splash`) VALUES
+(1, 'Welcome to my favourite things! I\'m so excited you decided to explore the very bubbly world of Yasmina! So grab a drink, take a seat, and enjoy the art of  dynamic web pages!', 'intro_1.jpg');
 
 -- --------------------------------------------------------
 
@@ -48,6 +67,12 @@ INSERT INTO `fave_things` (`ID`, `Name`, `Description`, `Experience`, `Image`) V
 --
 
 --
+-- Indexes for table `fave_intro`
+--
+ALTER TABLE `fave_intro`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `fave_things`
 --
 ALTER TABLE `fave_things`
@@ -56,6 +81,12 @@ ALTER TABLE `fave_things`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `fave_intro`
+--
+ALTER TABLE `fave_intro`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `fave_things`

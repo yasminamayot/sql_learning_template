@@ -4,10 +4,9 @@ const router = express.Router();
 const sql = require('../utils/sql');
 
 router.get('/', (req, res) => {
-    // should really get the user data here and then fetch it thru, but let's try this asynchronously
-    console.log('at the main route');
 
-    let query = "SELECT ID, avatar, Name, Logo, JobTitle FROM tbl_card";
+
+    let query = "SELECT ID, Intro, Splash FROM fave_intro";
 
     sql.query(query, (err, result) => {
         if (err) { throw err; console.log(err); }
@@ -15,7 +14,7 @@ router.get('/', (req, res) => {
         console.log(result); // should see objects wrapped in an array
 
         // render the home view with dynamic data
-        res.render('home', { people: result });
+        res.render('home', { introItem: result });
     })
 })
 
