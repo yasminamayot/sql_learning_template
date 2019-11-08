@@ -10,10 +10,10 @@ body {
 
 h1, h2, h3 { color: $heading-color }
 
-.panel { min-height: 60vh; }
+.panel { min-height: 80vh; }
 
 .panel:nth-child(odd) {
-    background-color: salmon;
+    background-color: beige;
     color: white;
 }
 
